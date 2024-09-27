@@ -21,3 +21,19 @@ for file in *; do
         fi
     fi
 done
+
+TASK 2
+
+# 
+sort satelite_temperature_data.csv | uniq > temp_clean.csv
+mv temp_clean.csv satelite_temperature_data.csv
+
+#
+sort -t, -k2,2nr satelite_temperature_data.csv | head -n 5 > analyzed/top-5-highest-temperatures.csv
+
+# 
+sort -t, -k2,2n satelite_temperature_data.csv | head -n 5 > analyzed/top-5-lowest-temperatures.csv
+
+#
+grep 'Rwanda' satelite_temperature_data.csv > analyzed/country-heat_data.csv
+
