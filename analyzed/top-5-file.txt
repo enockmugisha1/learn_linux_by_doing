@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for file in *; do
+    if [ -f "$file" ]; then
+        if [[ "$file" != top-5* ]]; then
+            mv "$file" "top-5-$file"
+        fi
+    fi
+done
