@@ -10,4 +10,14 @@
    - The loop iterates over each file in the `analyzed` directory.
    - It checks if the item is a file and does not start with "top-5".
    - If it doesn't match, it renames the file by prefixing it with "top-5-".
+i write this scipt in order to rename the file with "top-5-"
+     
+#!/bin/bash
 
+for file in *; do
+    if [ -f "$file" ]; then
+        if [[ "$file" != top-5* ]]; then
+            mv "$file" "top-5-$file"
+        fi
+    fi
+done
