@@ -37,3 +37,6 @@ sort -t, -k2,2n satelite_temperature_data.csv | head -n 5 > analyzed/top-5-lowes
 #
 grep 'Rwanda' satelite_temperature_data.csv > analyzed/country-heat_data.csv
 
+#
+Gift worked on the  extraction of the top 5 highest recorded heat temperatures from the Months mentioned in the dataset.
+cat satelite_temperature_data.csv | sort -t ',' -k3 -nr | head -5 > top-5-highest-temperatures.csv
