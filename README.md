@@ -40,3 +40,8 @@ grep 'Rwanda' satelite_temperature_data.csv > analyzed/country-heat_data.csv
 #
 Gift worked on the  extraction of the top 5 highest recorded heat temperatures from the Months mentioned in the dataset.
 cat satelite_temperature_data.csv | sort -t ',' -k3 -nr | head -5 > top-5-highest-temperatures.csv
+#
+Betelhem worked on  extract data of all the heat recorded from Ethiopia and save them in another new file country-heat_data.csv
+grep '^Ethiopia' satelite_temperature_data.csv > country-heat_data.csv
+
+
